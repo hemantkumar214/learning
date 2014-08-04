@@ -1,11 +1,23 @@
 Rails.application.routes.draw do
  
+  get 'comments/new'
+
+  get 'comments/create'
+
+  get 'comments/update'
+
+  get 'comments/destroy'
+
+  get 'comments/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
    root 'articles#index'
-   resources :articles
+   resources :articles do
+      resources :comments
+ end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
