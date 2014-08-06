@@ -1,0 +1,9 @@
+<div>
+	<% if member_signed_in? %>
+		<%= "welcome #{current_member.email}" %>
+		<%= link_to 'Signout',destroy_member_session_path, method: :delete %>
+	<% else %>
+		<%= link_to 'Signin',new_member_session_path %>
+		<%= link_to 'Signup',new_member_registration_path %>
+	<% end %>
+</div>

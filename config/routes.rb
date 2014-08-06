@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
- 
-  get 'comments/new'
+  
 
-  get 'comments/create'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
-
-  get 'comments/show'
-
+  devise_for :members
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
