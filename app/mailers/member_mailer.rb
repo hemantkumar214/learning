@@ -1,5 +1,5 @@
 class MemberMailer < ActionMailer::Base
-  default from: "hemant.trigunayat@gmail.com"
+  default from: "roronlineshopping@gmail.com"
 
   def welcome_email(member)
   	@member=member

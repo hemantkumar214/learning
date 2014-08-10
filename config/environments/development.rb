@@ -43,8 +43,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'localhost:3000',
-    user_name:            'hemant.trigunayat',
-    password:             'hemant123456',
+    user_name:            'roronlineshopping',
+    password:             'freshersror',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
