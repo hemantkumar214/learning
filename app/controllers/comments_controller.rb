@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :authenticate_member!, only: [:new, :create]
+  before_filter :authenticate_member!, only: [:new, :create, :destroy]
   #http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
   def new
   end
