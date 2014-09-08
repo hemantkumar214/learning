@@ -4,6 +4,7 @@
   <title>Learning</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
   <%= csrf_meta_tags %>
 
 </head>
@@ -11,7 +12,8 @@
 <div><%= render 'layouts/nevigation' %></div>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= yield %>
-
+<div id="ajax-response">
+	<%= yield %>
+</div>
 </body>
 </html>

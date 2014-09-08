@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -79,4 +79,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.secret_key = '43c1f7698cec054972a1ff1c9c657ee6c6792bee363c4eb235049c6a534ad96e1ef501f74cef63648fc21e5440c85a0d79cbe5260712bdae148e54eb5edcd876'
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => 'localhost:3000',
+  :user_name            => 'roronlineshopping@gmail.com',
+  :password             => 'freshersror',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true  }
 end

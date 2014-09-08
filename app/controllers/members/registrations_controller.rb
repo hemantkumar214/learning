@@ -1,15 +1,15 @@
 class Members::RegistrationsController < Devise::RegistrationsController
+
 before_filter :configure_devise_permitted_parameter
-def new
-    super
- end
+  def new
+  	build_resource({})
+  end
 
 def create
 	build_resource(sign_up_params)
-	resource_saved = resource.save
-	yield resource if block_given?
-	if resource_saved
-		MemberMailer.welcome_email(params[:member])
+	# yield resource if block_given?
+	if resource.save
+		MemberMailer.welcome_email(params[:member]).deliver
 	if resource.active_for_authentication?
 	set_flash_message :notice, :signed_up if is_flashing_format?
 	sign_up(resource_name, resource)

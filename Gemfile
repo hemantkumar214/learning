@@ -44,3 +44,6 @@ gem 'devise'
 ## javascript runtime issue
 gem 'therubyracer'
 gem 'execjs'
+
+## gem for api
+gem 'rails-api'
