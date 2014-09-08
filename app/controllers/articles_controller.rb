@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_filter :authenticate_member!, only: [:new, :edit, :destroy , :update]
-   #http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  #before_filter :authenticate_member!, only: [:edit, :destroy , :update]
+  # http_basic_authenticate_with name: "hemant", password: "hemant", except: [:index, :show]
   def index
     @articles=Article.all
   end
